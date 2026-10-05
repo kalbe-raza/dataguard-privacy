@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<title>Data Guard Privacy Policy</title>
+<meta name="description" content="How the Data Guard browser extension handles prompts, files and answers on ChatGPT, Claude and Gemini." />
+<style>
+  :root {
+    --bg: #ffffff; --surface: #faf7f8; --border: #ebe4e7;
+    --text: #1f1519; --muted: #6c5f65; --accent: #8c1d40;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #18121a; --surface: #211921; --border: #382c33;
+      --text: #f4eef1; --muted: #b7a9b0; --accent: #e25a80;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #18121a; --surface: #211921; --border: #382c33;
+    --text: #f4eef1; --muted: #b7a9b0; --accent: #e25a80;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 400 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 72px; }
+  .bar { height: 4px; background: linear-gradient(90deg, #d0201f, #a3123a 48%, #5c0a4f); }
+  h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 6px; }
+  .meta { color: var(--muted); margin: 0 0 32px; font-size: 0.95rem; }
+  h2 { font-size: 1.25rem; letter-spacing: -0.01em; margin: 40px 0 10px; }
+  h3 { font-size: 1.02rem; margin: 22px 0 6px; }
+  p, li { max-width: 68ch; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .summary { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+  .summary ul { margin: 8px 0 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 10px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .table-wrap { overflow-x: auto; }
+  code { font-size: 0.9em; background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<main>
+  <h1>Data Guard Privacy Policy</h1>
+  <p class="meta">Browser extension for ChatGPT, Claude and Gemini · Effective 2 October 2026</p>
+
+  <div class="summary">
+    <strong>In short</strong>
+    <ul>
+      <li>Data Guard hides sensitive details (names, phone numbers, CNICs, emails, addresses and similar) in what you send to ChatGPT, Claude and Gemini, so those services receive placeholders such as <code>PERSON_1</code> instead of the real values.</li>
+      <li>To do that, your prompts, the files you upload and the AI's answers are sent to Data Guard's own server, operated by Jazz. They are sent nowhere else.</li>
+      <li>The server keeps the link between placeholders and real values for a short time (one hour after last use), so the real values can be put back into the answers. Then it is deleted.</li>
+      <li>No advertising, no analytics, no tracking, no selling or sharing of your data.</li>
+    </ul>
+  </div>
+
+  <h2>Who this policy is for</h2>
+  <p>Data Guard is an internal tool for Jazz employees. It works only after you sign in to the Data Guard console with your Jazz Microsoft 365 account. This policy explains what the Data Guard Chrome extension does with your information. It covers the extension and the Data Guard server it talks to. It does not cover ChatGPT, Claude or Gemini themselves, which have their own privacy policies.</p>
+
+  <h2>What the extension handles</h2>
+  <p>The extension runs only on <code>chatgpt.com</code>, <code>chat.openai.com</code>, <code>claude.ai</code> and <code>gemini.google.com</code>. It does nothing on any other website and does not read your browsing history.</p>
+
+  <h3>Prompts you send</h3>
+  <p>When you send a prompt on one of those sites, the extension sends its text to the Data Guard server. The server replaces sensitive details with placeholders and returns the masked text. Only the masked text goes to the AI site.</p>
+
+  <h3>Files you upload</h3>
+  <p>When you attach a file on one of those sites, the extension sends it to the Data Guard server, which returns a masked copy. Only the masked copy is uploaded to the AI site; the original is never handed to it. If masking fails, nothing is uploaded.</p>
+
+  <h3>The AI's answers</h3>
+  <p>When an answer contains placeholders, the extension sends that text to the Data Guard server, which returns it with the real values put back. The restored answer is shown on the page in your browser. It is not sent back to the AI site.</p>
+
+  <h3>Your sign-in</h3>
+  <p>The extension has no password or login of its own. It uses the sign-in cookie that the Data Guard console sets when you sign in with Microsoft. That cookie identifies you (by your work email address) to the Data Guard server, so that only you can restore what you masked. A sign-in lasts 8 hours.</p>
+
+  <h3>Your choices in the extension</h3>
+  <p>Your on/off choices (detect tables, restore answers automatically, show the on-page button) are saved with Chrome's storage. If you use Chrome sync, Chrome syncs these choices to your other devices. They contain no personal information.</p>
+  <p>Custom terms you type (extra words to always mask) and the link between each chat and its masking session are kept only in your browser's memory. They are never written to disk, never synced, and are erased when you close the browser.</p>
+
+  <h2>Where your data goes</h2>
+  <p>Prompts, files and answers travel only between your browser and the Data Guard server at <code>data-guard.jazz.com.pk</code>, over an encrypted HTTPS connection. The server runs on Jazz's own network and can be reached only from that network or its VPN. No other company or service receives your data from Data Guard.</p>
+  <p>The AI sites receive only the masked version of your prompts and files, exactly as they would receive anything you send them. What they do with it is governed by their own policies.</p>
+
+  <h2>What is kept, and for how long</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>What</th><th>Where</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr><td>Link between placeholders and real values (needed to restore answers)</td><td>Data Guard server</td><td>Deleted one hour after it was last used</td></tr>
+      <tr><td>Uploaded files and their masked copies</td><td>Data Guard server</td><td>Deleted when the masking job finishes. Anything left over is removed within 6 hours.</td></tr>
+      <tr><td>Activity record: your work email, the time, and how many items of each type were masked or restored</td><td>Data Guard server logs</td><td>Kept for security and troubleshooting. It never contains the real values, your prompts, your files or the answers.</td></tr>
+      <tr><td>Sign-in session</td><td>Data Guard server and a cookie in your browser</td><td>8 hours, or until you sign out</td></tr>
+      <tr><td>Custom terms and chat-to-session links</td><td>Your browser's memory only</td><td>Until you close the browser</td></tr>
+      <tr><td>On/off choices</td><td>Chrome storage (synced if you use Chrome sync)</td><td>Until you change them or remove the extension</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The placeholder links are never backed up, so they cannot outlive their expiry.</p>
+
+  <h2>Who can see your data</h2>
+  <ul>
+    <li><strong>You.</strong> Only the person who masked something can restore it. Other users of Data Guard, including other Jazz employees, cannot.</li>
+    <li><strong>Jazz administrators who run the Data Guard server.</strong> While your data is being processed, and while it is held for the times above, it is on a server they operate. Access is limited to the people responsible for running it.</li>
+    <li><strong>Nobody else.</strong> Data Guard does not sell, rent, share or transfer your data to third parties. It does not use it for advertising, for profiling, for credit decisions, or to train any AI model.</li>
+  </ul>
+
+  <h2>Things worth knowing</h2>
+  <ul>
+    <li><strong>Restored answers are shown on the AI site's page.</strong> That is how real values appear in place in the answer. Like anything shown on that page, the site's own scripts could read it. Data Guard never sends restored values back to the AI site.</li>
+    <li><strong>Your own prompt stays masked on screen</strong>, so you can see exactly what the AI received.</li>
+    <li><strong>Masking is automatic and may miss something.</strong> Data Guard is designed to mask too much rather than too little, but it cannot guarantee that every sensitive detail is caught. Follow Jazz's policies on what may be shared with AI services.</li>
+  </ul>
+
+  <h2>Why the extension asks for each permission</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+    <tbody>
+      <tr><td>Access to chatgpt.com, chat.openai.com, claude.ai and gemini.google.com</td><td>To mask prompts and uploads before they are sent, and to restore the real values in answers</td></tr>
+      <tr><td>Access to data-guard.jazz.com.pk</td><td>To send text and files to the Data Guard server for masking and restoring</td></tr>
+      <tr><td>Storage</td><td>To remember your on/off choices, custom terms and which masking session belongs to which chat</td></tr>
+      <tr><td>Scripting</td><td>To start protecting AI-site tabs that were already open when the extension was installed or updated</td></tr>
+      <tr><td>Side panel</td><td>To show Data Guard beside the page</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The extension contains all of its own code. It does not download or run code from anywhere else.</p>
+
+  <h2>Chrome Web Store User Data Policy</h2>
+  <p>The use of information received through this extension adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Data is used only to provide Data Guard's single purpose, masking sensitive data in what you send to AI chat services and restoring it in their answers.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>Turn off automatic restoring, table detection or the on-page button at any time in the side panel.</li>
+    <li>Sign out of the Data Guard console to end your sign-in session.</li>
+    <li>Remove the extension at <code>chrome://extensions</code>. This erases everything it stored in your browser. Anything still on the server expires on the schedule above.</li>
+  </ul>
+
+  <h2>Changes to this policy</h2>
+  <p>If Data Guard starts handling data differently, this page will be updated and the effective date above will change.</p>
+
+  <h2>Contact</h2>
+  <!-- TODO before publishing: replace with a real, monitored Jazz address. The Chrome Web Store expects a working contact. -->
+  <p>Questions about this policy or about your data: <a href="mailto:CONTACT_EMAIL_HERE">CONTACT_EMAIL_HERE</a>.</p>
+
+  <footer>Data Guard · Jazz</footer>
+</main>
+</body>
+</html>
