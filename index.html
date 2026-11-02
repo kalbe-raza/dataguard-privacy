@@ -54,7 +54,7 @@
 <div class="bar"></div>
 <main>
   <h1>Data Guard Privacy Policy</h1>
-  <p class="meta">Browser extension for ChatGPT, Claude and Gemini · Effective 2 October 2026</p>
+  <p class="meta">Browser extension for ChatGPT, Claude and Gemini · Effective 28 October 2026</p>
 
   <div class="summary">
     <strong>In short</strong>
@@ -67,7 +67,7 @@
   </div>
 
   <h2>Who this policy is for</h2>
-  <p>Data Guard is an internal tool for Jazz employees. It works only after you sign in to the Data Guard console with your Jazz Microsoft 365 account. This policy explains what the Data Guard Chrome extension does with your information. It covers the extension and the Data Guard server it talks to. It does not cover ChatGPT, Claude or Gemini themselves, which have their own privacy policies.</p>
+  <p>Data Guard is an internal tool for Jazz employees. It works only after you sign in with your Jazz Microsoft 365 account. This policy explains what the Data Guard Chrome extension does with your information. It covers the extension and the Data Guard server it talks to. It does not cover ChatGPT, Claude or Gemini themselves, which have their own privacy policies.</p>
 
   <h2>What the extension handles</h2>
   <p>The extension runs only on <code>chatgpt.com</code>, <code>chat.openai.com</code>, <code>claude.ai</code> and <code>gemini.google.com</code>. It does nothing on any other website and does not read your browsing history.</p>
@@ -76,13 +76,13 @@
   <p>When you send a prompt on one of those sites, the extension sends its text to the Data Guard server. The server replaces sensitive details with placeholders and returns the masked text. Only the masked text goes to the AI site.</p>
 
   <h3>Files you upload</h3>
-  <p>When you attach a file on one of those sites, the extension sends it to the Data Guard server, which returns a masked copy. Only the masked copy is uploaded to the AI site; the original is never handed to it. If masking fails, nothing is uploaded.</p>
+  <p>When you attach a file on one of those sites, the extension sends it to the Data Guard server, which returns a masked copy. Only the masked copy is uploaded to the AI site; the original is never handed to it. If masking fails, nothing is uploaded. To confirm the AI site accepted the masked copy, the extension looks for its file name on the page; that check happens in your browser and sends nothing anywhere.</p>
 
   <h3>The AI's answers</h3>
   <p>When an answer contains placeholders, the extension sends that text to the Data Guard server, which returns it with the real values put back. The restored answer is shown on the page in your browser. It is not sent back to the AI site.</p>
 
   <h3>Your sign-in</h3>
-  <p>The extension has no password or login of its own. It uses the sign-in cookie that the Data Guard console sets when you sign in with Microsoft. That cookie identifies you (by your work email address) to the Data Guard server, so that only you can restore what you masked. A sign-in lasts 8 hours.</p>
+  <p>You sign in with Microsoft, in Microsoft's own window, either from the extension or on the Data Guard console. The extension never sees your password. Microsoft returns a token that confirms who you are; the extension passes it once to the Data Guard server and does not keep it. The server then sets a sign-in cookie, which the extension cannot read. That cookie identifies you (by your work email address) to the Data Guard server, so that only you can restore what you masked. A sign-in lasts 8 hours.</p>
 
   <h3>Your choices in the extension</h3>
   <p>Your on/off choices (detect tables, restore answers automatically, show the on-page button) are saved with Chrome's storage. If you use Chrome sync, Chrome syncs these choices to your other devices. They contain no personal information.</p>
@@ -132,6 +132,7 @@
       <tr><td>Storage</td><td>To remember your on/off choices, custom terms and which masking session belongs to which chat</td></tr>
       <tr><td>Scripting</td><td>To start protecting AI-site tabs that were already open when the extension was installed or updated</td></tr>
       <tr><td>Side panel</td><td>To show Data Guard beside the page</td></tr>
+      <tr><td>Identity</td><td>To open Microsoft's sign-in window without leaving the page you are on</td></tr>
     </tbody>
   </table>
   </div>
@@ -151,8 +152,7 @@
   <p>If Data Guard starts handling data differently, this page will be updated and the effective date above will change.</p>
 
   <h2>Contact</h2>
-  <!-- TODO before publishing: replace with a real, monitored Jazz address. The Chrome Web Store expects a working contact. -->
-  <p>Questions about this policy or about your data: <a href="mailto:syed.raza4@guest.jazz.com.pk">CONTACT_EMAIL_HERE</a>.</p>
+  <p>Questions about this policy or about your data: <a href="mailto:syed.raza4@guest.jazz.com.pk">syed.raza4@guest.jazz.com.pk</a>.</p>
 
   <footer>Data Guard · Jazz</footer>
 </main>
